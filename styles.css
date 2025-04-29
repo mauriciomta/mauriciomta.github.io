@@ -64,11 +64,6 @@ nav ul {
     margin: 0 0 2em 0;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 1em;
-}
-
 nav a {
     color: #666;
     text-decoration: none;
@@ -169,15 +164,98 @@ a:hover {
     margin: 1em 0;
 }
 
-.back-link {
-    display: block;
-    margin-bottom: 2em;
-}
-
 .post-date {
     color: #666;
     display: block;
     margin: 1em 0;
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.radio-container input[type="radio"] {
+    display: none;
+}
+
+.radio-label {
+    padding: 4px 8px;
+    transition: background-color 0.2s;
+}
+
+/* Hide radio buttons but keep them functional */
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+/* Language content handling */
+.lang-en, .lang-pt {
+    display: none;
+}
+
+/* When English is selected */
+#lang-en:checked ~ main .lang-en {
+    display: inline;
+}
+
+/* When Portuguese is selected */
+#lang-pt:checked ~ main .lang-pt {
+    display: inline;
+}
+
+/* Header container for title and language selector */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+/* Adjust h1 margin since it's now in a flex container */
+.header-container h1 {
+    margin: 0;
+}
+
+/* Language selector styling */
+.language-selector ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.language-selector li {
+    display: inline;
+}
+
+/* Add pipe separator between items */
+.language-selector li:not(:last-child)::after {
+    content: "|";
+    margin: 0 0.5em;
+    color: #ccc;
+}
+
+.language-selector label {
+    color: #ccc;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.language-selector label:hover {
+    color: #000;
+}
+
+/* Style for selected language */
+#lang-en:checked ~ main .language-selector label[for="lang-en"],
+#lang-pt:checked ~ main .language-selector label[for="lang-pt"] {
+    color: #666;
+    text-underline-offset: 4px;
+    text-decoration: underline;
+    text-decoration-color: #ccc;
+    text-decoration-style: dotted;
 }
 
 /* Responsive adjustments */
@@ -192,5 +270,11 @@ a:hover {
 
     h2 {
         font-size: 1.25rem;
+    }
+
+    .language-selector {
+        position: static;
+        justify-content: flex-end;
+        margin-bottom: 1em;
     }
 } 

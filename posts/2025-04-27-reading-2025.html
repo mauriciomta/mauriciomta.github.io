@@ -7,16 +7,35 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <!-- Move radio inputs to the top but keep them hidden -->
+    <input type="radio" name="language" id="lang-en" checked>
+    <input type="radio" name="language" id="lang-pt">
+
     <main>
-        <a href="../index.html" class="back-link">← Home</a>
+        <header class="header-container">
+            <a href="../index.html" class="back-link">← Home</a>
+            <nav class="language-selector">
+                <ul>
+                    <li><label for="lang-en">EN 🇬🇧</label></li>
+                    <li><label for="lang-pt">PT 🇧🇷</label></li>
+                </ul>
+            </nav>
+        </header>
         
         <article>
-            <h1>What I read in 2025</h1>
-            <span class="post-date">Updated April 27, 2025</span>
+            <h1>
+                <span class="lang-en">What I read in 2025</span>
+                <span class="lang-pt">O que li em 2025</span>
+            </h1>
+            <span class="post-date">
+                <span class="lang-en">Updated April 27, 2025</span>
+                <span class="lang-pt">Atualizado em 27 de abril de 2025</span>
+            </span>
 
             <div class="post-content">
                 <p>
-                    These are some notes on the books I've read so far this year.
+                    <span class="lang-en">These are some notes on the books I've read so far this year.</span>
+                    <span class="lang-pt">Estas são algumas notas sobre os livros que li até agora este ano.</span>
                 </p>
 
                 <div class="book">

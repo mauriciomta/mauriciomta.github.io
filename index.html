@@ -7,19 +7,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Move radio inputs to the top but keep them hidden -->
+    <input type="radio" name="language" id="lang-en" checked>
+    <input type="radio" name="language" id="lang-pt">
+
     <main>
         <header>
-            <h1>Mauricio Terra</h1>
-            <!-- <nav>
-                <ul>
-                    <li><a href="#reading-notes">Reading Notes</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                </ul>
-            </nav> -->
+            <div class="header-container">
+                <h1>Mauricio Terra</h1>
+                <nav class="language-selector">
+                    <ul>
+                        <li><label for="lang-en">EN 🇬🇧</label></li>
+                        <li><label for="lang-pt">PT 🇧🇷</label></li>
+                    </ul>
+                </nav>
+            </div>
             <p class="intro">
-                Software Engineer at Nubank, working with Clojure, Python, and some other technologies. 
-                I enjoy fiction books, cooking, swimming, and aerial circus. 
-                I speak Portuguese 🇧🇷, French 🇫🇷, and English 🇬🇧.
+                <span class="lang-en">Software Engineer at Nubank, working with Clojure, Python, and some other technologies. 
+                I enjoy fiction books, cooking, swimming, and aerial circus.
+                I speak Portuguese 🇧🇷, French 🇫🇷, and English 🇬🇧.</span>
+                <span class="lang-pt">Engenheiro de Software no Nubank, trabalhando com Clojure, Python e outras tecnologias. 
+                Gosto de livros de ficção, cozinhar, nadar e atividades circenses aéreas.
+                Eu falo Português 🇧🇷, Francês 🇫🇷 e Inglês 🇬🇧.</span>
             </p>
         </header>
 
@@ -28,8 +37,14 @@
             <ul>
                 <li>
                     <span class="date">Apr 27</span>
-                    <a href="posts/reading-2025.html">What I read in 2025</a>
-                    <p>Some notes on the books I've read so far this year</p>
+                    <a href="posts/2025-04-27-reading-2025.html">
+                        <span class="lang-en">What I read in 2025</span>
+                        <span class="lang-pt">O que li em 2025</span>
+                    </a>
+                    <p>
+                        <span class="lang-en">Some notes on the books I've read so far this year</span>
+                        <span class="lang-pt">Algumas notas sobre os livros que li até agora neste ano</span>
+                    </p>
                 </li>
             </ul>
         </section>
